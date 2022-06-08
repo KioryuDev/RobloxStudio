@@ -2,7 +2,7 @@ local debris = game:GetService("Debris")
 local tween = game:GetService("TweenService")
 local tweenInfo = TweenInfo.new(.25)
 
-function Damage(parent, damage)
+function DamageTxt(parent, damage)
 	local gui = Instance.new("BillboardGui")
 	gui.Name = "damageGui"
 	gui.AlwaysOnTop = true
