@@ -25,7 +25,7 @@ humanoid.HealthChanged:Connect(function(hp)
 	if humanoid:GetState() == Enum.HumanoidStateType.Dead then return end
 	
 	local change = hp - currentHp
-	print(change)
+	-- print(change)
 	if change < 0 and inUse == false then
 		coroutine.resume(coroutine.create(ChangeFace), character)	
 	end
