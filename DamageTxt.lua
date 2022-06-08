@@ -2,9 +2,7 @@ local debris = game:GetService("Debris")
 local tween = game:GetService("TweenService")
 local tweenInfo = TweenInfo.new(.25)
 
-local module = {}
-
-function module:Damage(parent, damage)
+function Damage(parent, damage)
 	local gui = Instance.new("BillboardGui")
 	gui.Name = "damageGui"
 	gui.AlwaysOnTop = true
@@ -29,5 +27,3 @@ function module:Damage(parent, damage)
 	tween:Create(txt, tweenInfo, {TextTransparency = 1}):Play()
 	wait(.25)
 end
-
-return module
