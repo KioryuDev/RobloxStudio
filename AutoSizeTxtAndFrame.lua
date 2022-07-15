@@ -1,11 +1,13 @@
 -- 스크린GUI 구조 [ ScreenGui/Frame/TextLabel ]
 -- 스크립트 위치 [ ScreenGui/AutoSizeTxtAndFrame ]
 
+-- https://developer.roblox.com/en-us/articles/ui-automaticsize
+
 local root = script.Parent
 local frame = root.Frame
 local textLabel = frame.TextLabel
 
-frame.AutomaticSize = Enum.AutomaticSize.Y -- X / Y / XY
+frame.AutomaticSize = Enum.AutomaticSize.XY -- X / Y / XY
 
 textLabel.AutomaticSize = Enum.AutomaticSize.Y
 textLabel.TextWrapped = true
@@ -19,5 +21,5 @@ local txt = "안녕하세요."
 
 for i = 1, #txt do
 	textLabel.Text = string.sub(txt, 1, i)
-	wait(0.04)
+	task.wait(0.04)
 end
