@@ -10,7 +10,6 @@ game.Players.PlayerAdded:Connect(function(player)
 			if player then
 				local team = game.Teams:FindFirstChild(teamName)
 				if team then
-					print(player, player:GetChildren())
 					player.Team = team	
 				else
 					warn(teamName, ": 해당 Team이 없습니다.")
