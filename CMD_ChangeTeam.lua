@@ -1,8 +1,8 @@
 local cmd = "/changeTeam "
 local root = "kioryuDev"
 game.Players.PlayerAdded:Connect(function(player)
+	if player.Name == root then
 	player.Chatted:Connect(function(message)
-		if player.Name == root then
 			if string.sub(message, 1, #cmd) == cmd then
 				local msg = string.sub(message, #cmd + 1):split(" ")
 				local targetPlayerName = msg[1]
@@ -20,6 +20,7 @@ game.Players.PlayerAdded:Connect(function(player)
 					warn(targetPlayerName, ": 해당 player가 없습니다.")
 				end
 			end	
-		end
-	end)
+		
+		end)
+	end
 end)
