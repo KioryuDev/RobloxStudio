@@ -10,18 +10,19 @@ local func2
 
 local KEY = "MovePlate"
 
-func = run.Heartbeat:Connect(function()
+func = run.Stepped:Connect(function()
 
 	--------------------------------------------------------------- CHECK PLATFORM BELOW
 
-	local RootPart = char.LowerTorso
+	local RootPart = char.PrimaryPart
+	if RootPart == nil then return end
 
 	local Ignore = char
 
 	local ray = Ray.new(RootPart.CFrame.p,Vector3.new(0,-50,0))
 
 	local Hit, Position, Normal, Material = workspace:FindPartOnRay(ray,Ignore)
-	
+
 	if Hit and  Hit:GetAttribute(KEY) ~= nil and  Hit:GetAttribute(KEY) then -- Change "key" to whatever the moving part's name is
 		--------------------------------------------------------------- MOVE PLAYER TO NEW POSITON FROM OLD POSITION
 
