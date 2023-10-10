@@ -1,3 +1,5 @@
+-- 출처 : https://devforum.roblox.com/t/get-instance-from-path/2423987
+
 local fullPath = script:GetFullName()
 
 -- 함수 선언: 문자열 경로(`path`)를 이용해 인스턴스를 반환하거나 `nil` 반환 가능
